@@ -1,4 +1,4 @@
-﻿<Window x:Class="RaiderNo.Player"
+﻿<Window x:Class="RaiderNo.PlayerWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,13 +12,13 @@
             <ColumnDefinition Width="74*"/>
         </Grid.ColumnDefinitions>
         <Label Content="赛季大米次数：" HorizontalAlignment="Left" Margin="22,17,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="dungeonsCount" Content="3" HorizontalAlignment="Right" Margin="0,17,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="dungeonsCountLabel" Content="3" HorizontalAlignment="Right" Margin="0,17,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
         <Label Content="赛季最佳限时：" HorizontalAlignment="Left" Margin="22,47,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="bestDungeon" Content="托尔达戈(12)" HorizontalAlignment="Right" Margin="0,47,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="bestDungeonLabel" Content="托尔达戈(12)" HorizontalAlignment="Right" Margin="0,47,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
         <Label Content="赛季评分（各副本最佳限时总层数）：" HorizontalAlignment="Left" Margin="22,77,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2"/>
-        <Label x:Name="totalLevels" Content="101&#xD;&#xA;" HorizontalAlignment="Right" Margin="0,77,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="totalLevelsLabel" Content="101&#xD;&#xA;" HorizontalAlignment="Right" Margin="0,77,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
         <Label Content="近10场大米表现：" HorizontalAlignment="Left" Margin="22,107,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="latestDungeons" Content="托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)" HorizontalAlignment="Left" Margin="37,137,0,0" VerticalAlignment="Top" Height="216" Width="170" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label x:Name="latestDungeonsLabel" Content="托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)" HorizontalAlignment="Left" Margin="37,137,0,0" VerticalAlignment="Top" Height="216" Width="170" FontSize="16" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
