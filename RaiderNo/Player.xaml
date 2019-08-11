@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RaiderNo"
         mc:Ignorable="d"
-        Title="Player" Height="365.256" Width="429.381" ResizeMode="NoResize">
+        Title="Player" Height="412.256" Width="429.381" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="67*"/>
@@ -18,7 +18,7 @@
         <Label Content="赛季评分（各副本最佳限时总层数）：" HorizontalAlignment="Left" Margin="22,77,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2"/>
         <Label x:Name="totalLevels" Content="101&#xD;&#xA;" HorizontalAlignment="Right" Margin="0,77,31.667,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
         <Label Content="近10场大米表现：" HorizontalAlignment="Left" Margin="22,107,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="latestDungeons" Content="托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)" HorizontalAlignment="Left" Margin="37,137,0,0" VerticalAlignment="Top" Height="171" Width="170" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label x:Name="latestDungeons" Content="托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)&#xD;&#xA;托尔达戈(+3)" HorizontalAlignment="Left" Margin="37,137,0,0" VerticalAlignment="Top" Height="216" Width="170" FontSize="16" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

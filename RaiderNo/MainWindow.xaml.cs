@@ -34,9 +34,19 @@ namespace RaiderNo
 
             try
             {
-                dynamic user = GetUserInfo(nameBox.Text, realmBox.Text);
-                List<dynamic> dungeons = GetUserDungeons(user.character.id.Value);
-
+                string name = nameBox.Text;
+                string realm = realmBox.Text;
+                dynamic user = GetUserInfo(name, realm);
+                string userid = user.character.id.Value;
+                List<dynamic> dungeons;
+                if (userid.IndexOf("@temp") >= 0)
+                {
+                    dungeons = GetUserDungeonsByName(user.character.playerId.Value, name, realm);
+                }
+                else
+                {
+                    dungeons = GetUserDungeons(userid.Replace("@temp", ""));
+                }
                 Player playerForm = new Player(user, dungeons);
                 playerForm.ShowDialog();
             }
@@ -69,7 +79,16 @@ namespace RaiderNo
                     try
                     {
                         dynamic user = GetUserInfo(name, realm);
-                        List<dynamic> dungeons = GetUserDungeons(user.character.id.Value);
+                        string userid = user.character.id.Value;
+                        List<dynamic> dungeons;
+                        if (userid.IndexOf("@temp") >= 0)
+                        {
+                            dungeons = GetUserDungeonsByName(user.character.playerId.Value, name, realm);
+                        }
+                        else
+                        {
+                            dungeons = GetUserDungeons(userid.Replace("@temp", ""));
+                        }
                         playerInfos.Add(user);
                         playerDungeons.Add(dungeons);
                         playernames.Add(name + '-' + realm);
@@ -152,6 +171,32 @@ namespace RaiderNo
                     dungeons.Add(li);
                 }
                 if (page_num >= obj.dungeonHistory.pageTotal.Value) {
+                    break;
+                }
+                page_num += 1;
+            }
+            return dungeons;
+        }
+        private List<dynamic> GetUserDungeonsByName(string playerId, string playerName, string playerRealm)
+        {
+            Console.WriteLine(playerId);
+            Console.WriteLine(playerName);
+            Console.WriteLine(playerRealm);
+            List<dynamic> dungeons = new List<dynamic>();
+            int page_num = 1;
+            while (true)
+            {
+                string url = "https://wowapp.ot.netease.com/wowapp/api/dungeon/history/0?playerId=" + playerId + "&playerName=" + playerName + "&realm=" + playerRealm + "&page_size =100&page_num=" + page_num;
+
+                Console.WriteLine(url);
+                dynamic obj = HttpGetJson(url);
+                dynamic list = obj.dungeonHistory.list;
+                foreach (dynamic li in list)
+                {
+                    dungeons.Add(li);
+                }
+                if (page_num >= obj.dungeonHistory.pageTotal.Value)
+                {
                     break;
                 }
                 page_num += 1;
